@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScript</title>
+</head>
+<body>
+
+	<center>
+	<div><h2>Calcule a área de um terreno:</h2></div>
+	<center>
+
+		<input type="number"  id="num1" placeholder="Digite a largura:" required> <br><br>
+
+		<input type="number"  id="num2" placeholder="Digite o comprimento:" required> <br><br>
+
+		<button type="submit" onclick="calcularAreaTerreno()">Calcular</button> <br><br><br>
+		
+
+	<script type="text/javascript">
+
+		function calcularAreaTerreno(){
+
+		let largura = document.getElementById('num1').value
+		let comprimento = document.getElementById('num2').value
+
+			let area = largura * comprimento
+
+			alert('O terreno possui: ' + area + ' metros quadrados')
+		}
+
+	</script>
+
+
+</body>
+</html>
