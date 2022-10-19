@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Troco</title>
+</head>
+<body>
+
+	<center style="margin-top: 50px;">
+
+		<label>Troco:</label> <br><br>
+		
+		<input type="number" placeholder="Preço unitário do produto" id="preco"> <br><br>
+
+		<input type="number" placeholder="Quantidade comprada" id="qtd"> <br><br>
+
+		<input type="number" placeholder="Dinheiro recebido" id="recebido"> <br><br>
+
+		<button type="submit" id="click">Troco</button>
+
+	</center>
+
+	<script>
+		
+		document.getElementById('click').addEventListener('click', () => {
+
+			let preco = document.getElementById('preco').value
+			let qtd = document.getElementById('qtd').value
+			let recebido = document.getElementById('recebido').value
+
+			let total = parseFloat(preco) * parseInt(qtd)
+			let troco = parseInt(recebido) - parseInt(total)
+
+			alert(`Troco: ${troco}`)
+
+			document.getElementById('preco').value = ''
+			document.getElementById('qtd').value = ''
+			document.getElementById('recebido').value = ''
+		
+		})
+
+	</script>
+
+</body>
+</html>
