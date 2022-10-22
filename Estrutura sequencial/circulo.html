@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Circulo</title>
+</head>
+<body>
+
+	<center style="margin-top: 50px;" >
+		
+		<label>Circulo:</label> <br><br>
+
+		<input type="number" placeholder="Digite o valor do raio do circulo:" style="width: 250px" id="pi"> <br><br>
+
+		<button type="submit" id="click">Calcular</button>
+
+	</center>
+
+	<script>
+		
+		document.getElementById('click').addEventListener('click', () => {
+
+			let raio = document.getElementById('pi').value
+
+			let area = Math.PI * Math.pow(raio, 2)
+
+			alert(`a área desse circulo é: ${area.toFixed(2)}`)
+
+		})
+
+	</script>
+
+</body>
+</html>

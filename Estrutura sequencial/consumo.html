@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Consumo</title>
+</head>
+<body>
+
+	<center style="margin-top: 50px;">
+		
+		<label>Consumo:</label> <br><br>
+		<input type="number" name="distancia" placeholder="Distância percorrida"> <br><br>
+		<input type="number" name="combustivel" placeholder="Combustivel gasto"> <br><br>
+
+		<button type="submit" id="click" name="clickou">Consumo</button>
+
+	</center>
+
+	<script>
+
+		document.querySelector('[name="clickou"]').addEventListener('click', () => {
+
+			let distancia = document.querySelector('[name="distancia"]').value
+			let combustivel = document.querySelector('[name="combustivel"]').value
+
+			let media = parseFloat(distancia) / parseInt(combustivel)
+
+			alert(`Consumo médio: ${media.toFixed(3)}`)
+
+		})
+
+	</script>
+
+</body>
+</html>

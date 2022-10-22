@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Duracão</title>
+</head>
+<body>
+
+	<center style="margin-top: 50px;">
+		
+		<label>Duração:</label> <br><br>
+
+		<input id="duracao" type="number" placeholder="Digite a duração em segundos:" style="width: 200px;" autofocus> <br><br>
+
+		<button type="submit" id="clicou">Ler</button>
+
+	</center>
+
+	<script>
+		
+		document.getElementById('clicou').addEventListener('click', () => {
+
+			let duracao = document.getElementById('duracao').value
+
+			let horas = parseInt(duracao / 3600)
+
+			let resto = parseInt(duracao % 3600)
+
+			let minutos = parseInt(resto / 60)
+
+			let segundos =  parseInt(resto % 60)
+
+			console.log(`${horas}:${minutos}:${segundos}`)
+
+		})
+
+	</script>
+
+</body>
+</html>

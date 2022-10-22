@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Medidas</title>
+</head>
+<body>
+
+	<center style="margin-top: 50px">
+
+	<label>Medidas:</label> <br><br>
+	
+	<input type="number" placeholder="Digite a medida A:" id="quadrado" required> <br><br>
+	<input type="number" placeholder="Digite a medida B:" id="triangulo" required> <br><br>
+	<input type="number" placeholder="Digite a medida C:" id="trapezio" required> <br><br>
+
+	<button type="submit" id="click1">Área do Quadrado</button>
+	<button type="submit" id="click2">Área do triângulo</button>
+	<button type="submit" id="click3">Área do Trapézio</button>
+
+	</center>
+
+	<script>
+		
+		document.getElementById('click1').addEventListener('click', () => {
+
+			let quadrado = document.getElementById('quadrado').value
+
+			area = parseFloat(quadrado * quadrado)
+
+			alert(`A área do quadrado que tem lado A é: ${area.toFixed(4)}`)
+
+		})
+
+		document.getElementById('click2').addEventListener('click', () => {
+
+			let base = document.getElementById('quadrado').value
+			let altura = document.getElementById('triangulo').value
+
+			let area = parseFloat((base * altura) / 2)
+
+			alert(`A área do triângulo retângulo com base A e altura B é: ${area.toFixed(4)}`)
+
+		})
+
+		document.getElementById('click3').addEventListener('click', () => {
+
+			let base = document.getElementById('quadrado').value
+			let base1 = document.getElementById('triangulo').value
+			let altura = document.getElementById('trapezio').value
+
+			let area = ((parseFloat(base) + parseFloat(base1)) * parseFloat(altura)) / 2
+
+			alert(`A área do trapézio com base A e B, e altura C é: ${area.toFixed(4)}`)
+
+		})
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pagamento</title>
+</head>
+<body>
+
+	<center style="margin-top: 50px;">
+		
+		<label>Pagamento:</label> <br><br>
+
+		<input type="text" placeholder="Digite o nome: " id="nome"> <br><br>
+		<input type="number" placeholder="Valor por hora: " id="hora"> <br><br>
+		<input type="number" placeholder="Horas trabalhadas:" id="horastrab"> <br><br>
+
+		<button type="submit" id="click">Pagamento</button>
+
+	</center>
+
+	<script>
+		
+		document.getElementById('click').addEventListener('click', () => {
+
+			let nome = document.getElementById('nome').value
+			let hora = document.getElementById('hora').value
+			let horasTrabalhadas = document.getElementById('horastrab').value
+
+			let pagamento = parseFloat(hora) * parseInt(horasTrabalhadas)
+
+			alert(`O pagamento para ${nome} deve ser ${pagamento}`)
+
+		})
+
+	</script>
+
+</body>
+</html>
