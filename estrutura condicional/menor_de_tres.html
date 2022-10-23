@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>menor_de_tres</title>
+</head>
+<body>
+
+	<center style="margin-top: 50px;">
+		
+		<label>Menor de Três:</label> <br><br>
+
+		<input type="number" placeholder="Primeiro valor:" id="num1"> <br><br>
+		<input type="number" placeholder="Segundo valor:" id="num2"> <br><br>
+		<input type="number" placeholder="Terceiro valor:" id="num3"> <br><br>
+
+		<button type="submit" onclick="Click()">Menor</button>
+
+	</center>
+
+	<script>
+		
+		function Click(){
+
+			let a = document.getElementById('num1').value
+			let b = document.getElementById('num2').value
+			let c = document.getElementById('num3').value
+
+			let num1 = parseInt(a)
+			let num2 = parseInt(b)
+			let num3 = parseInt(c)
+			
+			if (num1 <= num2 && num1 <= num3) {
+
+				alert('Menor: ' + num1)
+
+			} else if (num2 <= num1 && num2 <= num3) {
+
+				alert('Menor: ' + num2)
+
+			} else if (num3 <= num1 && num3 <= num2) {
+
+				alert('Menor: ' + num3)
+
+			}
+
+			window.location.href = 'menor_de_tres.html'
+
+		}
+
+	</script>
+
+</body>
+</html>

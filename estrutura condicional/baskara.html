@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Baskara</title>
+</head>
+<body>
+
+	<center style="margin-top: 50px;">
+		
+		<label>Baskara:</label> <br><br>
+
+		<input type="number" placeholder="Coeficiente a:" id="a"> <br><br>
+		<input type="number" placeholder="Coeficiente b:" id="b"> <br><br>
+		<input type="number" placeholder="Coeficiente c:" id="c"> <br><br>
+
+		<button type="submit" id="click" >Calcular</button>
+
+	</center>
+
+	<script>
+		
+		document.getElementById('click').addEventListener('click', () => {
+
+			let a = document.getElementById('a').value
+			let b = document.getElementById('b').value
+			let c = document.getElementById('c').value
+
+			let delta = Math.pow(parseInt(b), 2)  - 4 * parseInt(a) * parseInt(c)
+
+			if (a == 0 || delta < 0) {
+
+				alert('Esta equação não possui raizes')
+
+			} else {
+
+				let x1 = (- parseFloat(b) + Math.sqrt(delta)) / (2 * parseFloat(a))
+				let x2 = (- parseFloat(b) - Math.sqrt(delta)) / (2 * parseFloat(a))
+
+				alert(`X1 = ${x1.toFixed(4)} e X2 = ${x2.toFixed(4)}`)
+
+			}
+
+			window.location.href = 'baskara.html'
+
+		})
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Glicose</title>
+</head>
+<body>
+
+	<center style="margin-top: 50px;">
+		
+		<label>Glicose:</label> <br><br>
+
+		<input type="number" placeholder="Digite a medida da glicose:" id="glicose" style="width: 200px;"> <br><br>
+
+		<button type="submit" id="click">Calcular</button>
+
+	</center>
+
+	<script>
+
+		document.getElementById('click').addEventListener('click', () => {
+
+			let glicose = document.getElementById('glicose').value
+
+			if (glicose <= 100) {
+
+				alert(`normal`)
+
+			} else if (glicose >= 100 && glicose <= 140) {
+
+				alert(`elevado`)
+
+			} else if (glicose > 140) {
+
+				alert(`diabetes`)
+
+			}
+
+			window.location.href = 'glicose.html'
+
+		})
+
+
+	</script>
+
+</body>
+</html>

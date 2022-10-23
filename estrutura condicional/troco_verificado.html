@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>troco_verificado</title>
+</head>
+<body>
+
+	<center style="margin-top: 50px;">
+
+		<label>Troco verificado:</label> <br><br>
+		
+		<input type="number" placeholder="Preço unitário do produto:" id="produto"> <br><br>
+		<input type="number" placeholder="Quantidade comprada:" id="qtd"> <br><br>
+		<input type="number" placeholder="Dinheiro recebido:" id="recebido"> <br><br>
+
+		<button type="submit" id="click">Calcular</button>
+
+	</center>
+
+	<script>
+
+		document.getElementById('click').addEventListener('click', () => {
+
+		var produto = document.getElementById('produto').value
+		var quantidade = document.getElementById('qtd').value
+		var dinheiroRecebido = document.getElementById('recebido').value
+
+			produto = parseFloat(produto)
+			quantidade = parseFloat(quantidade)
+			dinheiroRecebido = parseFloat(dinheiroRecebido)
+
+			let total = produto * quantidade
+
+			if (dinheiroRecebido >= total) {
+
+				let troco = total - dinheiroRecebido
+
+				alert(`Troco:  + ${Math.abs(troco.toFixed(2))} reais`)
+
+			} else {
+
+				let faltante = total - dinheiroRecebido
+
+				console.log(`dinheiro não o suficiente! faltando: + ${faltante.toFixed(2)} reais`)
+
+			}
+
+			window.location.href = 'troco_verificado.html'
+		})
+
+	</script>
+
+</body>
+</html>
