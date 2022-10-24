@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>aumento</title>
+</head>
+<body>
+
+	<center style="margin-top: 50px;">
+		
+		<label>Aumento:</label> <br><br>
+
+		<input type="number" placeholder="Digite o salario da pessoa:" style="width: 180px;" id="salario"> <br><br>
+
+		<button type="submit" id="click">Calcular</button>
+
+	</center>
+
+	<script>
+		
+		document.getElementById('click').addEventListener('click', () => {
+
+			let salario = document.getElementById('salario').value
+
+			salario = parseFloat(salario);
+
+			let novoSalario = 0;
+			let aumento = 0;
+			let porcentagem = 0;
+
+			if (salario <= 1000) {
+
+				novoSalario = salario + (salario * 0.20)
+				aumento = salario * 0.20
+				porcentagem = 20
+
+				alert(`Novo salario: ${novoSalario} \nAumento: ${aumento} \nPorcentagem: ${porcentagem}%`)
+
+			} else if (salario >= 1000 && salario <= 3000) {
+
+				novoSalario = salario + (salario * 0.15)
+				aumento = salario * 0.15
+				porcentagem = 15
+
+				alert(`Novo salario: ${novoSalario} \nAumento: ${aumento} \nPorcentagem: ${porcentagem}%`)
+
+			} else if (salario >= 3000 && salario <= 8000) {
+
+				novoSalario = salario + (salario * 0.10)
+				aumento = salario * 0.10
+				porcentagem = 10
+
+				alert(`Novo salario: ${novoSalario} \nAumento: ${aumento} \nPorcentagem: ${porcentagem}%`)
+
+			} else if (salario >= 8000) {
+
+				novoSalario = salario + (salario * 0.05)
+				aumento = salario * 0.05
+				porcentagem = 5
+
+				alert(`Novo salario: ${novoSalario} \nAumento: ${aumento} \nPorcentagem: ${porcentagem}%`)
+
+			}
+
+			window.location.href = 'problema aumento.html'
+
+		})
+
+	</script>
+
+</body>
+</html>

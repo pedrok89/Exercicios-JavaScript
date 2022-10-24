@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lanchonete</title>
+</head>
+<body>
+
+	<center style="margin-top: 50px;">
+		
+		<label>Lanchonete:</label> <br><br>
+
+		<input type="number" placeholder="Código do produto comprado:" id="codigo" style="width: 200px;"> <br><br>
+
+		<input type="number" placeholder="Quantidade comprada:" id="compra"> <br><br>
+
+		<button type="submit" id="click">Calcular</button>
+
+	</center>
+
+	<script>
+			
+		document.getElementById('click').addEventListener('click', () => {
+
+			let codigo = document.getElementById('codigo').value
+			let compra = document.getElementById('compra').value
+
+			let result = 0;
+
+			codigo = parseFloat(codigo);
+			compra = parseFloat(compra);
+
+			if (codigo == 1) {
+
+				result = compra * 5
+
+				alert(`Valor a pagar: ${result.toFixed(2)}`)
+
+			} else if (codigo == 2) {
+
+				result = compra * 3.5
+
+				alert(`Valor a pagar: ${result.toFixed(2)}`)
+
+			} else if (codigo == 3) {
+
+				result = compra * 4.8
+
+				alert(`Valor a pagar: ${result.toFixed(2)}`)
+
+			} else if (codigo == 4) {
+
+				result = compra * 8.9
+
+				alert(`Valor a pagar: ${result.toFixed(2)}`)
+
+			} else if (codigo == 5) {
+
+				result = compra * 7.32
+
+				alert(`Valor a pagar: ${result.toFixed(2)}`)
+			}
+
+			window.location.href = 'lanchonete.html'
+
+		})
+
+	</script>
+
+</body>
+</html>

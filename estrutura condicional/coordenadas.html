@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>coordenadas</title>
+</head>
+<body>
+
+	<center style="margin-top: 50px;">
+		
+		<label>Coordenadas:</label> <br><br>
+
+		<input type="number" placeholder="Valor de x:" id="x"> <br><br>
+		<input type="number" placeholder="Valor de y:" id="y"> <br><br>
+
+		<button type="submit" id="click">Calcular</button>
+
+	</center>
+
+	<script>
+		
+		document.getElementById('click').addEventListener('click', () => {
+
+			let x = document.getElementById('x').value
+			let y = document.getElementById('y').value
+
+			x = parseFloat(x)
+			y = parseFloat(y)
+
+			if (x > 0 && y > 0) {
+
+				alert(`Q1`)
+
+			} else if (x < 0 && y > 0) {
+
+				alert(`Q2`)
+
+			} else if (x < 0 && y < 0) {
+
+				alert(`Q3`)
+
+			} else if (x > 0 && y < 0) {
+
+				alert(`Q4`)
+
+			} else if (x == 0 && y == 0) {
+
+				alert(`Origem`)
+
+				if (x == 0) {
+
+					alert(`Eixo Y`)
+
+				} else {
+
+					alert(`Eixo X`)
+				}
+
+			}
+
+			window.location.href = 'coordenadas.html'
+
+		})
+
+	</script>
+
+</body>
+</html>
