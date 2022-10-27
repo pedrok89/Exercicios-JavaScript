@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crescente</title>
+</head>
+<body>
+
+	<center style="margin-top: 50px;">
+		
+		<label>Problema crescente:</label> <br><br>
+
+		<input type="number" placeholder="Digite um número:" id="x"> <br><br>
+		<input type="number" placeholder="Digite outro número:" id="y"> <br><br>
+
+		<button type="submit" id="calcular">Calcular</button>
+
+	</center>
+
+	<script>
+		
+		document.getElementById('calcular').addEventListener('click', () => {
+
+			let x = document.getElementById('x').value
+			let y = document.getElementById('y').value
+
+			x = parseFloat(x)
+			y = parseFloat(y)
+
+			while(x != y){
+
+				if (x < y) {
+
+					alert(`Crescente`);
+
+				} else {
+
+					alert(`Decrescente`);
+				}
+
+				break;
+			}
+
+			window.location.href = 'problema_crescente.html'
+
+		})
+
+	</script>
+
+</body>
+</html>
